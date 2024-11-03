@@ -17,4 +17,16 @@ def test_check_elements_pega_element(browser):
     time.sleep(5)
     assert elements_page.center_element.get_text() == 'Please select an item from left to start practice.'
 
+def test_page_elements(browser):
+    elements_page = ElementsPage(browser)
+    elements_page.visit()
+    assert elements_page.text_elements.get_text() == 'Please select an item from left to start practice.'
+    time.sleep(5)
+    assert elements_page.icon.exist()
+    time.sleep(5)
+    assert elements_page.btn_sidebar_first.exist()
+    time.sleep(5)
+    assert elements_page.btn_sidebar_first_textbox.exist()
+
+
 
