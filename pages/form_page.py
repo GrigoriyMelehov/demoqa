@@ -20,6 +20,15 @@ class FormPage(BasePage):
         self.current_address = WebElement(driver, '#currentAddress')
         self.user_form = WebElement(driver, '#userForm')
 
+        self.btn_state = WebElement(driver,'#state')
+        self.btn_ncr = WebElement(driver, "//*[contains(text(), 'NCR')]", 'xpath')
+        self.inp_state = WebElement(driver, '#react-select-3-input')
+
+        self.btn_city = WebElement(driver, '#city')
+        self.btn_noida = WebElement(driver, "//*[contains(text(), 'Noida')]", 'xpath')
+        self.inp_city = WebElement(driver, '#react-select-4-input')
+
+
 
 
 
