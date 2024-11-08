@@ -19,3 +19,6 @@ class WebTables(BasePage):
         self.salary = WebElement(driver, '#salary')
         self.department = WebElement(driver, '#department')
         self.btn_submit = WebElement(driver, '#submit')
+        self.btn_next = WebElement(driver, 'div.-next > button')
+        self.btn_previous = WebElement(driver, 'div.-previous > button')
+        self.input_number = WebElement(driver, 'input[type=number]')
