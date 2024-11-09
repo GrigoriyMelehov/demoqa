@@ -11,3 +11,5 @@ class ModalDialogs(BasePage):
         self.btn_large_modal = WebElement(driver, '#showLargeModal')
         self.btn_close_sm = WebElement(driver, '#closeSmallModal')
         self.btn_close_lm = WebElement(driver, '#closeLargeModal')
+
+

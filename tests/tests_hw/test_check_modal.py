@@ -1,9 +1,14 @@
 import time
 
+from pages.base_page import BasePage
 from pages.modal_dialogs import ModalDialogs
 import urllib.request
 
-if urllib.request.urlopen('https://demoqa.com/modal-dialogs').getcode() == 201:
+a = ModalDialogs(BasePage)
+b = "base_url"
+url = getattr(a, b)
+
+if urllib.request.urlopen(url).getcode() == 200:
     def test_check_modal(browser):
         md = ModalDialogs(browser)
 
