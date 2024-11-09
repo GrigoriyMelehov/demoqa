@@ -25,7 +25,7 @@ def test_check_alert_text(browser):
     alert_page.alert().accept()
     assert not alert_page.alert()
 
-def test_check_alert_timer(browser):
+def test_check_alert_timer(browser): # 12_2 home work
     alert_page = Alerts(browser)
 
     alert_page.visit()
