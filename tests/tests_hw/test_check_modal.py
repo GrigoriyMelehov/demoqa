@@ -3,7 +3,7 @@ import time
 from pages.modal_dialogs import ModalDialogs
 import urllib.request
 
-if urllib.request.urlopen('https://demoqa.com/modal-dialogs').getcode() == 200:
+if urllib.request.urlopen('https://demoqa.com/modal-dialogs').getcode() == 201:
     def test_check_modal(browser):
         md = ModalDialogs(browser)
 

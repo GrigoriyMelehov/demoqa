@@ -9,7 +9,9 @@ class Alerts(BasePage):
         super().__init__(driver, self.base_url)
 
         self.btn_alert = WebElement(driver, '#alertButton')
+        self.btn_alert_timer = WebElement(driver, '#timerAlertButton')
         self.btn_confirm = WebElement(driver, '#confirmButton')
         self.confirm_results =WebElement(driver, '#confirmResult')
         self.btn_prompt = WebElement(driver, '#promtButton')
         self.prompt_results = WebElement(driver, '#promptResult')
+
