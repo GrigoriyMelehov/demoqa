@@ -4,6 +4,7 @@ from pages.webtables import WebTables
 
 def test_check_webtables_next_previous_btns(browser):
     web_tables_page = WebTables(browser)
+
     web_tables_page.visit()
 
     def add_row():
@@ -15,10 +16,10 @@ def test_check_webtables_next_previous_btns(browser):
         web_tables_page.salary.send_keys('111')
         web_tables_page.department.send_keys('rrr')
         web_tables_page.btn_submit.click()
-        time.sleep(1)
 
     for i in range(5):
         add_row()
+        time.sleep(1)
 
     web_tables_page.btn_next.scroll_to_elements()
     browser.set_window_size(1500, 1000)
@@ -33,20 +34,16 @@ def test_check_webtables_next_previous_btns(browser):
     assert not web_tables_page.btn_next.get_dom_attribute('disabled')
 
     web_tables_page.btn_next.click()
-
-    assert web_tables_page.input_number.get_attribute('value') == '2'
-
     time.sleep(2)
 
+    assert web_tables_page.input_number.get_attribute('value') == '2'
     assert not web_tables_page.btn_previous.get_dom_attribute('disabled')
 
     web_tables_page.btn_previous.click()
+    time.sleep(2)
 
     assert web_tables_page.input_number.get_attribute('value') == '1'
-
-    time.sleep(2)
     browser.set_window_size(1000, 1000)
-    time.sleep(2)
 
 
 

@@ -26,3 +26,12 @@ def test_webtables(browser):
     time.sleep(5)
     web_tables_page.basket_4_row.click()
     time.sleep(5)
+
+# def test_delete_last_row(browser):
+#     web_tables_page = WebTables(browser)
+#
+#     web_tables_page.visit()
+#     list = browser.find_elements('span[id*="delete"] path')
+#     web_tables_page.list[len(list)-1].click()
+#     time.sleep(5)
+
