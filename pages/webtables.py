@@ -23,3 +23,5 @@ class WebTables(BasePage):
         self.btn_previous = WebElement(driver, 'div.-previous > button')
         self.input_number = WebElement(driver, 'input[type=number]')
 
+        self.table_header_element = WebElement(driver, 'div[class*="rt-th rt-resizable"]')
+
