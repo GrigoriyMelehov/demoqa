@@ -5,10 +5,8 @@ from pages.modal_dialogs import ModalDialogs
 import urllib.request
 
 a = ModalDialogs(BasePage)
-b = "base_url"
-url = getattr(a, b)
 
-if urllib.request.urlopen(url).getcode() == 200:
+if urllib.request.urlopen(a.base_url).getcode() == 200:
     def test_check_modal(browser):
         md = ModalDialogs(browser)
 
