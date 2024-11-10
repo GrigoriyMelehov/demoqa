@@ -1,14 +1,14 @@
-from pages.modal_dialogs import ModalDialog
+from pages.modal_dialogs import ModalDialogs
 from pages.demoqa import DemoQa
 import time
 
 def test_modal_elements(browser):
-    model_dialogs = ModalDialog(browser)
+    model_dialogs = ModalDialogs(browser)
     model_dialogs.visit()
     assert model_dialogs.btn_elements.check_count_elements(5)
 
 def test_navigation_modal(browser):
-    model_dialogs = ModalDialog(browser)
+    model_dialogs = ModalDialogs(browser)
     demo_qa = DemoQa(browser)
 
     model_dialogs.visit()

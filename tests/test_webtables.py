@@ -9,8 +9,8 @@ def test_webtables(browser):
 
     assert not web_tables_page.no_rows_found.exist()
 
-    while web_tables_page.basket_1_row.exist():
-        web_tables_page.basket_1_row.click()
+    while web_tables_page.basket_row.exist():
+        web_tables_page.basket_row.click()
         time.sleep(1)
 
     assert web_tables_page.no_rows_found.exist()

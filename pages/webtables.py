@@ -8,9 +8,9 @@ class WebTables(BasePage):
         super().__init__(driver, self.base_url)
 
         self.no_rows_found = WebElement(driver, 'div.rt-noData')
-        self.pencil_4_row = WebElement(driver, 'div:nth-child(4) span[id*="edit"] path')
-        self.basket_1_row = WebElement(driver, 'span[id*="delete"] path')
-        self.basket_4_row = WebElement(driver, 'div:nth-child(4) span[id*="delete"] path')
+        self.pencil_4_row = WebElement(driver, 'div:nth-child(4) span[id*="edit"] path')#необходимость ситуативная
+        self.basket_row = WebElement(driver, 'span[id*="delete"] path')
+        self.basket_4_row = WebElement(driver, 'div:nth-child(4) span[id*="delete"] path')#необходимость ситуативная
         self.btn_add = WebElement(driver, '#addNewRecordButton')
         self.first_name = WebElement(driver, '#firstName')
         self.last_name = WebElement(driver, '#lastName')

@@ -12,4 +12,7 @@ class ModalDialogs(BasePage):
         self.btn_close_sm = WebElement(driver, '#closeSmallModal')
         self.btn_close_lm = WebElement(driver, '#closeLargeModal')
 
+        self.icon = WebElement(driver, '#app > header > a')
+        self.btn_elements = WebElement(driver, '#app > div > div > div > div:nth-child(1) > div > div > div:nth-child(3) > div >ul >li')
+
 
