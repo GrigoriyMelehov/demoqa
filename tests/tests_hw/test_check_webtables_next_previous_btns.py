@@ -1,4 +1,5 @@
 import time
+
 from pages.webtables import WebTables
 
 
@@ -44,6 +45,7 @@ def test_check_webtables_next_previous_btns(browser):
 
     assert web_tables_page.input_number.get_attribute('value') == '1'
     browser.set_window_size(1000, 1000)
+
 
 
 
